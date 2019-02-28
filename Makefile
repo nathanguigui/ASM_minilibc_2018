@@ -16,7 +16,8 @@ RM	= rm -f
 NAME	= libasm.so
 
 SRCS	=	src/strlen.S \
-			src/strchr.S
+			src/strchr.S \
+			src/memset.S
 
 CFLAGS	= -shared -fpic
 
