@@ -1,6 +1,6 @@
 BITS 64
 section .text
-global strcmp
+global strcmp:function
 
 strcmp:
     xor rax, rax
@@ -10,17 +10,23 @@ strcmp:
     je .end
     cmp byte[rdi], sil
     jg .greater
+    cmp byte[rdi], sil
     jl .lower
     inc rdi
+    inc rsi
     jmp .cmp_loop
 
 .greater:
     inc rax
-    jmp .end
+    inc rdi
+    inc rsi
+    jmp .cmp_loop
 
 .lower:
     dec rax
-    jmp .end
+    inc rdi
+    inc rsi
+    jmp .cmp_loop
 
 .end:
     ret

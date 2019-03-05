@@ -4,13 +4,11 @@ global strchr
 
 strchr:
     mov rax, rdi
-    mov rcx, rsi
 
 .search_loop:
-    cmp byte[rdi], 0
+    cmp byte[rax], 0
     je .get_res
-    movzx rdx, byte[rax]
-    cmp rdx, rcx
+    cmp byte[rax], sil
     je .end
     inc rax
     jmp .search_loop

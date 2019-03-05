@@ -2,7 +2,7 @@
 ## EPITECH PROJECT, 2019
 ## Makefile
 ## File description:
-## by Ugo MOULIN
+## by Nathan GUIGUI
 ##
 
 CC	= gcc
@@ -19,7 +19,8 @@ SRCS	=	src/strlen.S \
 			src/strchr.S \
 			src/strcmp.S \
 			src/memcpy.S \
-			src/memset.S
+			src/memset.S \
+			src/rindex.S
 
 CFLAGS	= -shared -fpic
 

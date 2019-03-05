@@ -6,7 +6,7 @@ memcpy:
     mov rax, rdi
 
 .cpy_loop:
-    cmp rdx, 0
+    cmp byte[rdx], 0
     je .end
     mov byte[rax], sil
     inc rax

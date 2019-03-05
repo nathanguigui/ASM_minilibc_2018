@@ -1,6 +1,6 @@
 BITS 64
 SECTION .text
-GLOBAL strlen
+GLOBAL strlen:function
 
 strlen:
     xor rax, rax
