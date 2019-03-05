@@ -16,7 +16,7 @@ strchr:
     jmp .search_loop
 
 .get_res:
-    mov rax, 0
+    mov rax, 0x0
     jmp .end
 
 .end:

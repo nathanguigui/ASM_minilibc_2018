@@ -1,17 +1,18 @@
 BITS 64
 section .text
-global memset
+global memcpy
 
-memset:
+memcpy:
     mov rax, rdi
 
-.set_loop:
+.cpy_loop:
     cmp rdx, 0
     je .end
     mov byte[rax], sil
     inc rax
+    inc rsi
     dec rdx
-    jmp .set_loop
+    jmp .cpy_loop
 
 .end:
     ret
