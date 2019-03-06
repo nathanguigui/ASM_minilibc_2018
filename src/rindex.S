@@ -10,7 +10,7 @@ rindex:
     je .end
     cmp byte[rdi], sil
     cmove rax, rdi
-    ; inc rdi
+    inc rdi
     jmp .search_loop
 
 .end:
