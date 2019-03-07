@@ -17,9 +17,9 @@ NAME	= libasm.so
 
 SRCS	=	src/strlen.S \
 			src/strchr.S \
-			src/strcmp.S \
-			src/memcpy.S \
 			src/memset.S \
+			src/memcpy.S \
+			src/strcmp.S \
 			src/rindex.S
 
 CFLAGS	= -shared -fpic

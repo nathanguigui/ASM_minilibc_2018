@@ -1,17 +1,17 @@
 BITS 64
-section .text
-global memset
+SECTION .text
+GLOBAL memset
 
 memset:
-    mov rax, rdi
+	xor rcx, rcx
+	mov rax, rdi
 
-.set_loop:
-    cmp byte[rdx], 0
-    je .end
-    mov byte[rax], sil
-    inc rax
-    dec rdx
-    jmp .set_loop
+.memset_loop:
+	cmp rcx, rdx
+	je .memset_end
+	mov byte [rax + rcx], sil
+	inc rcx
+	jmp .memset_loop
 
-.end:
-    ret
+.memset_end:
+	ret
