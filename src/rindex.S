@@ -6,10 +6,10 @@ rindex:
     xor rax, rax
 
 .search_loop:
-    cmp byte[rdi], 0
-    je .end
     cmp byte[rdi], sil
     cmove rax, rdi
+    cmp byte[rdi], 0
+    je .end
     inc rdi
     jmp .search_loop
 
