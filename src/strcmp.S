@@ -6,26 +6,20 @@ strcmp:
     xor rax, rax
 
 .cmp_loop:
+    mov r8b, [rsi]
+    cmp [rdi], r8b
+    jne .result
     cmp byte[rdi], 0
     je .end
-    cmp dil, sil
-    jl .lower
-    jg .greater
-    inc rdi
+    cmp byte[rsi], 0
     inc rsi
+    inc rdi
     jmp .cmp_loop
 
-.greater:
-    dec rax
-    inc rsi
-    inc rdi
-    jmp .end
-
-.lower:
-    inc rax
-    inc rsi
-    inc rdi
-    jmp .end
+.result:
+    mov rax, [rdi]
+    sub rax, [rsi]
+    ret
 
 .end:
     ret
