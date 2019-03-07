@@ -5,7 +5,7 @@
 ## by Nathan GUIGUI
 ##
 
-CC	= gcc
+CC	= ld
 
 ASM = nasm
 
