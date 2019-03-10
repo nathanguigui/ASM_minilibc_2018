@@ -20,8 +20,11 @@ SRCS	=	src/strlen.S \
 			src/memset.S \
 			src/memcpy.S \
 			src/strcmp.S \
+			src/memmove.S \
 			src/strncmp.S \
-			src/rindex.S
+			src/strcasecmp.S \
+			src/rindex.S \
+			src/strcspn.S
 
 CFLAGS	= -shared -fpic
 
